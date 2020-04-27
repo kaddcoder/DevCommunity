@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.p2.common.ui.gallery;
+package cat.urv.deim.asm.p2.common.ui.faqs;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import cat.urv.deim.asm.p2.common.R;
 
-public class GalleryFragment extends Fragment {
+public class FaqsFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private FaqsViewModel sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(this, new Observer<String>() {
+        sendViewModel =
+                ViewModelProviders.of(this).get(FaqsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_faqs, container, false);
+        final TextView textView = root.findViewById(R.id.text_send);
+        sendViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

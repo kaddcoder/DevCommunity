@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.p2.common.ui.send;
+package cat.urv.deim.asm.p2.common.ui.events;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import cat.urv.deim.asm.p2.common.R;
 
-public class SendFragment extends Fragment {
+public class EventsFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private EventsViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        slideshowViewModel =
+                ViewModelProviders.of(this).get(EventsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_events, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        slideshowViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

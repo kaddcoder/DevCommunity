@@ -1,4 +1,4 @@
-package cat.urv.deim.asm.p2.common.ui.tools;
+package cat.urv.deim.asm.p2.common.ui.scheduler;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import cat.urv.deim.asm.p2.common.R;
 
-public class ToolsFragment extends Fragment {
+public class SchedulerFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private SchedulerViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
+                ViewModelProviders.of(this).get(SchedulerViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_scheduler, container, false);
         final TextView textView = root.findViewById(R.id.text_tools);
         toolsViewModel.getText().observe(this, new Observer<String>() {
             @Override

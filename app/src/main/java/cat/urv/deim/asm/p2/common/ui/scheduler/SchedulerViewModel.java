@@ -1,16 +1,16 @@
-package cat.urv.deim.asm.p2.common.ui.home;
+package cat.urv.deim.asm.p2.common.ui.scheduler;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SchedulerViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public SchedulerViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is scheduler fragment");
     }
 
     public LiveData<String> getText() {
