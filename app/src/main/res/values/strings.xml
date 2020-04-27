@@ -12,5 +12,9 @@
     <string name="menu_tools">Scheduler</string>
     <string name="menu_share">Profile</string>
     <string name="menu_send">FAQs</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="action_sign_in_guest">SIGN IN AS GUEST</string>
     <string name="title_activity_main">MainActivity</string>
 </resources>
