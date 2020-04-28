@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        Boolean isLogged = getIntent().getExtras().getBoolean("USER_LOGGED");
+        if(isLogged) navigationView.getMenu().findItem(R.id.nav_profile).setVisible(true);
+        else navigationView.getMenu().findItem(R.id.nav_login).setVisible(true);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
