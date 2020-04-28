@@ -15,6 +15,11 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">SIGN IN</string>
-    <string name="action_sign_in_guest">SIGN IN AS GUEST</string>
+    <string name="action_sign_in_guest">ANONYMOUS USER</string>
+    <string name="sign_in_error_1">UPS... couldn\'t Sign In</string>
+    <string name="sign_in_error_2">Your username and password don\'t match.</string>
+    <string name="sign_in_error_3">Please, try again.</string>
+    <string name="sign_in_error_action">Please, try again.</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_error_login">ErrorLoginActivity</string>
 </resources>

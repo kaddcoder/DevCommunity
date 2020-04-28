@@ -12,11 +12,11 @@
     tools:context="LoginActivity">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="128dp"
 
         android:layout_marginEnd="24dp"
         android:hint="@string/prompt_email"
@@ -43,7 +43,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
         android:id="@+id/login"
@@ -51,10 +51,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="#C942A8EB"
+        android:backgroundTint="#11D4F0"
         android:enabled="true"
         android:text="@string/action_sign_in"
         android:textColor="#FFFFFF"
@@ -63,19 +63,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.45" />
-
-    <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="29dp"
-        android:layout_height="29dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/guest"
