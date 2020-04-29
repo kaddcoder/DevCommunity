@@ -1,5 +1,6 @@
 package cat.urv.deim.asm.p2.common;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.navigation.NavController;
@@ -14,7 +15,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,14 +35,36 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         Boolean isLogged = getIntent().getExtras().getBoolean("USER_LOGGED");
-        if(isLogged) navigationView.getMenu().findItem(R.id.nav_profile).setVisible(true);
-        else navigationView.getMenu().findItem(R.id.nav_login).setVisible(true);
+        if(isLogged) {
+            MenuItem profile = navigationView.getMenu().findItem(R.id.nav_profile);
+            profile.setVisible(true);
+            profile.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
+                    startActivity(profileIntent);
+                    return false;
+                }
+            });
+        }
+        else {
+            MenuItem login = navigationView.getMenu().findItem(R.id.nav_login);
+            login.setVisible(true);
+            login.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(loginIntent);
+                    return false;
+                }
+            });
+        }
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_news, R.id.nav_articles, R.id.nav_events,
-                R.id.nav_scheduler, R.id.nav_profile, R.id.nav_faqs)
+                R.id.nav_scheduler, R.id.nav_faqs)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
