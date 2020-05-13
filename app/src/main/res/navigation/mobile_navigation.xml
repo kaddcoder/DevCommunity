@@ -29,11 +29,9 @@
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_scheduler" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_profile"
-        android:name="cat.urv.deim.asm.p2.common.ui.profile.ProfileFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_profile" />
+        android:name="cat.urv.deim.asm.p2.common.ProfileActivity" />
 
     <fragment
         android:id="@+id/nav_faqs"

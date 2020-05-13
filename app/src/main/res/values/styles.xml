@@ -21,13 +21,6 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="AppTheme.ProfileScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">#30E8F4</item>
-        <item name="colorPrimaryDark">#41CDD6</item>
-    </style>
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

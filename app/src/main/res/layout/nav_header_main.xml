@@ -4,48 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/side_nav_bar"
-    android:backgroundTint="#11D4F0"
-    android:gravity="bottom"
+    android:layout_height="wrap_content"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="83dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:layout_constraintBottom_toTopOf="@+id/drawerUsername"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/ic_account_circle_white_36dp" />
 
     <TextView
         android:id="@+id/drawerUsername"
-        android:layout_width="266dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_marginTop="8dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toTopOf="@+id/drawerEmail"
+        android:textColor="#77090707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
-    <TextView
-        android:id="@+id/drawerEmail"
-        android:layout_width="276dp"
-        android:layout_height="22dp"
-        android:text="eduardo.kotlin@android.com"
-        android:textAlignment="center"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="84dp"
+        android:background="#6A666060"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drawerUsername" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

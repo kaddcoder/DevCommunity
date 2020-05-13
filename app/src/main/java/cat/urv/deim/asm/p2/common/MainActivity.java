@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,31 +35,6 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        Boolean isLogged = getIntent().getExtras().getBoolean("USER_LOGGED");
-        if(isLogged) {
-            MenuItem profile = navigationView.getMenu().findItem(R.id.nav_profile);
-            profile.setVisible(true);
-            profile.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
-                    startActivity(profileIntent);
-                    return false;
-                }
-            });
-        }
-        else {
-            MenuItem login = navigationView.getMenu().findItem(R.id.nav_login);
-            login.setVisible(true);
-            login.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-                    startActivity(loginIntent);
-                    return false;
-                }
-            });
-        }
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -70,6 +46,31 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+        MenuItem profile = navigationView.getMenu().findItem(R.id.nav_profile);
+        profile.setVisible(true);
+        profile.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Boolean isLogged = getIntent().getExtras().getBoolean("USER_LOGGED");
+                Class dest;
+
+                if(isLogged) {
+                    dest = ProfileActivity.class;
+                } else {
+                    dest = LoginActivity.class;
+                }
+
+                Intent intent = new Intent(MainActivity.this, dest);
+                intent.putExtra("USER_LOGGED", isLogged);
+                startActivity(intent);
+                return false;
+            }
+        });
+
+
     }
 
     @Override
