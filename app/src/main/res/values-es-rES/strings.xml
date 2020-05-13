@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Dev Community</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+    <string name="nav_header_desc">Cabecera de navegación</string>
+    <string name="menu_profile">Perfil de usuario</string>
+    <string name="profile_name">Sandra Adams</string>
+    <string name="profile_email">sandra.adams@email.com</string>
+    <string name="profile_emailStr">Correo electrónico</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="splash_title">Dev Community</string>
+    <string name="menu_home">Noticias</string>
+    <string name="menu_gallery">Articulos</string>
+    <string name="menu_slideshow">Eventos</string>
+    <string name="menu_tools">Calendario</string>
+    <string name="menu_share">Perfil</string>
+    <string name="menu_send">FAQs</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="tutorial_msg_1">Estar en contacto</string>
+    <string name="tutorial_msg_2">Redes</string>
+    <string name="tutorial_msg_3">Aprender</string>
+    <string name="tutorial_end">Saltar tutorial</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar sessión</string>
+    <string name="action_sign_in_guest">USUARIO ANÓNIMO</string>
+    <string name="sign_in_error_1">UPS... no se ha podido iniciar sessión</string>
+    <string name="sign_in_error_2">Tu nombre de usuario y contraseña no coinciden</string>
+    <string name="sign_in_error_3">Porfavor, vuelve a intentarlo.</string>
+    <string name="sign_in_error_action">Porfavor, vuelve a intentarlo.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_error_login">ErrorLoginActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+</resources>

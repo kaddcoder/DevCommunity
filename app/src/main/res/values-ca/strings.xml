@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Dev Community</string>
+    <string name="navigation_drawer_open">Obrir navigation drawer</string>
+    <string name="navigation_drawer_close">Tancar navigation drawer</string>
+    <string name="nav_header_desc">Capcelera navegació</string>
+    <string name="menu_profile">User profile</string>
+    <string name="profile_name">Sandra Adams</string>
+    <string name="profile_email">sandra.adams@email.com</string>
+    <string name="profile_emailStr">Correu electrònic</string>
+    <string name="action_settings">Preferencies</string>
+    <string name="splash_title">Dev Community</string>
+    <string name="menu_home">Notícies</string>
+    <string name="menu_gallery">Articles</string>
+    <string name="menu_slideshow">Events</string>
+    <string name="menu_tools">Calendari</string>
+    <string name="menu_share">Perfil</string>
+    <string name="menu_send">FAQs</string>
+    <string name="menu_settings">Preferencies</string>
+    <string name="tutorial_msg_1">Estar en contacte</string>
+    <string name="tutorial_msg_2">Treball en xarxa</string>
+    <string name="tutorial_msg_3">Aprendre</string>
+    <string name="tutorial_end"> Omet tutorial</string>
+    <string name="prompt_email">Correu electrònic</string>
+    <string name="prompt_password">Contrasenya</string>
+    <string name="action_sign_in">Iniciar la sessió</string>
+    <string name="action_sign_in_guest">USUARI ANÒNIM</string>
+    <string name="sign_in_error_1">UPS... no s\'ha pogut iniciar sessió</string>
+    <string name="sign_in_error_2">El teu usuari i contrasenya no coincideixen</string>
+    <string name="sign_in_error_3">Siusplau, torna a intentar-ho</string>
+    <string name="sign_in_error_action">Siusplau, torna a intentar-ho</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_error_login">ErrorLoginActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+</resources>
