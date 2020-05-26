@@ -3,21 +3,26 @@ package cat.urv.deim.asm.p3.shared;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import cat.urv.deim.asm.libraries.commanagerdc.models.CalendarItem;
 import cat.urv.deim.asm.p2.common.R;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.CalendarHolder> {
     // List to store all the contact details
-    private ArrayList<CalendarEntry> calendarList;
+    private List<CalendarItem> calendarList;
 
     // Counstructor for the Class
-    public CalendarAdapter(ArrayList<CalendarEntry> calendarList) {
+    public CalendarAdapter(List<CalendarItem> calendarList) {
         this.calendarList = calendarList;
     }
 
@@ -40,12 +45,13 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
     // This method is called when binding the data to the views being created in RecyclerView
     @Override
     public void onBindViewHolder(@NonNull CalendarHolder holder, final int position) {
-        final CalendarEntry event = calendarList.get(position);
+        final CalendarItem event = calendarList.get(position);
 
         // Set the data to the views here
-        holder.setTitleName(event.getTitle());
-        holder.setSubtitleName(event.getSubtitle());
+        holder.setTitleName(event.getName());
+        holder.setSubtitleName(event.getVenue());
         holder.setDate(event.getDate());
+        holder.setImage(event.getImageURL());
 
         // You can set click listners to indvidual items in the viewholder here
         // make sure you pass down the listner or make the Data members of the viewHolder public
@@ -58,6 +64,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         private TextView title;
         private TextView subtitle;
         private TextView date;
+        private ImageView image;
 
 
         public CalendarHolder(View itemView) {
@@ -66,6 +73,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
             title = itemView.findViewById(R.id.title_scheduler);
             subtitle = itemView.findViewById(R.id.subtitle_scheduler);
             date = itemView.findViewById(R.id.date);
+            image = itemView.findViewById(R.id.media_image);
         }
 
         public void setTitleName(String title) {
@@ -76,7 +84,9 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
             this.subtitle.setText(subtitle);
         }
 
-        public void setDate(String date) { this.date.setText(date.toString());}
+        public void setDate(String date) { this.date.setText(date);}
+
+        public void setImage(String url) { Picasso.get().load(url).into(image); }
     }
 
 }

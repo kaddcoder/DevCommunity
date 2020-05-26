@@ -16,7 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Objects;
 
+import cat.urv.deim.asm.libraries.commanagerdc.models.CalendarItem;
+import cat.urv.deim.asm.libraries.commanagerdc.providers.DataProvider;
 import cat.urv.deim.asm.p2.common.R;
 import cat.urv.deim.asm.p3.shared.CalendarAdapter;
 import cat.urv.deim.asm.p3.shared.CalendarEntry;
@@ -25,7 +29,7 @@ public class SchedulerFragment extends Fragment {
 
     private SchedulerViewModel toolsViewModel;
     private CalendarAdapter listAdapter;
-    private ArrayList<CalendarEntry> contactsList = new ArrayList<>();
+    private List<CalendarItem> scheduleList;
     private RecyclerView recycler;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -37,10 +41,13 @@ public class SchedulerFragment extends Fragment {
 
         recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        contactsList.add(new CalendarEntry("WTM Tarragona 2020", "Secondary line text Lorem ipsum dolor sit amet", "Photo1", "Tarragona, 6 Oct 2020"));
-        contactsList.add(new CalendarEntry("Col·laboració 3DActivistes", "Secondary line text Lorem ilde", "Photo2", "Reus, 15 Oct 2020"));
 
-        listAdapter = new CalendarAdapter(contactsList);
+        //Load data from commanagerdc
+        DataProvider dataProvider = DataProvider.getInstance(Objects.requireNonNull(getActivity()).getApplicationContext(),R.raw.faqs,R.raw.news,R.raw.articles,R.raw.events,R.raw.calendar);
+
+        scheduleList = dataProvider.getCalendar();
+
+        listAdapter = new CalendarAdapter(scheduleList);
         recycler.setAdapter(listAdapter);
 
         return root;
