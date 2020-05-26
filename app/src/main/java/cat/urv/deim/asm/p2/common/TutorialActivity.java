@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import cat.urv.deim.asm.R;
+
 public class TutorialActivity extends AppCompatActivity {
 
     private int[] tutorial_pages = {R.layout.tutorial_1, R.layout.tutorial_2, R.layout.tutorial_3};

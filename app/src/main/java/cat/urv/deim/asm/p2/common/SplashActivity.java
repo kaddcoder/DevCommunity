@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Handler;
 
+import cat.urv.deim.asm.R;
+
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIMEOUT = 4000;
     SharedPreferences prefs = null;

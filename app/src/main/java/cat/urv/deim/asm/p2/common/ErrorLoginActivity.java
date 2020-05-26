@@ -12,6 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import cat.urv.deim.asm.R;
+
 public class ErrorLoginActivity extends AppCompatActivity {
 
     @Override

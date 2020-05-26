@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ErrorLoginActivity"
+    tools:context=".p2.common.ErrorLoginActivity"
     tools:showIn="@layout/activity_error_login">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

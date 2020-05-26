@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import cat.urv.deim.asm.p2.common.R;
+import cat.urv.deim.asm.R;
 
 public class ArticlesFragment extends Fragment {
 

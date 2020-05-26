@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".SplashActivity"
+    tools:context=".p2.common.SplashActivity"
     tools:showIn="@layout/activity_splash">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

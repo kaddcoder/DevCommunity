@@ -15,6 +15,8 @@ import android.widget.Toolbar;
 
 import org.w3c.dom.Text;
 
+import cat.urv.deim.asm.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override

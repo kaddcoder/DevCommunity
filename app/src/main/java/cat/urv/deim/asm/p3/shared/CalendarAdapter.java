@@ -1,5 +1,7 @@
 package cat.urv.deim.asm.p3.shared;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import cat.urv.deim.asm.R;
 import cat.urv.deim.asm.libraries.commanagerdc.models.CalendarItem;
-import cat.urv.deim.asm.p2.common.R;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.CalendarHolder> {
     // List to store all the contact details
     private List<CalendarItem> calendarList;
+    private Context mContext;
 
     // Counstructor for the Class
     public CalendarAdapter(List<CalendarItem> calendarList) {
@@ -31,6 +33,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
     @Override
     public CalendarAdapter.CalendarHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        mContext = parent.getContext();
 
         // Inflate the layout view you have created for the list rows here
         View view = layoutInflater.inflate(R.layout.row_scheduler_layout, parent, false);
@@ -53,8 +56,14 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         holder.setDate(event.getDate());
         holder.setImage(event.getImageURL());
 
-        // You can set click listners to indvidual items in the viewholder here
-        // make sure you pass down the listner or make the Data members of the viewHolder public
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, CalendarDetailActivity.class);
+                intent.putExtra("CARD_POS", position);
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 

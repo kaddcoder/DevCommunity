@@ -4,26 +4,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import cat.urv.deim.asm.R;
 import cat.urv.deim.asm.libraries.commanagerdc.models.CalendarItem;
 import cat.urv.deim.asm.libraries.commanagerdc.providers.DataProvider;
-import cat.urv.deim.asm.p2.common.R;
 import cat.urv.deim.asm.p3.shared.CalendarAdapter;
-import cat.urv.deim.asm.p3.shared.CalendarEntry;
 
 public class SchedulerFragment extends Fragment {
 

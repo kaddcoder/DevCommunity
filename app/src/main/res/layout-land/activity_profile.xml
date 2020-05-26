@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ProfileActivity">
+    tools:context=".p2.common.ProfileActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/calendar_img"
         android:layout_width="0dp"
         android:layout_height="173dp"
         android:scaleType="centerCrop"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/profile_name"
+        android:id="@+id/calendar_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -29,10 +29,10 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/calendar_img" />
 
     <TextView
-        android:id="@+id/profile_email"
+        android:id="@+id/calendar_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -40,16 +40,16 @@
         android:text="@string/profile_email"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        app:layout_constraintTop_toBottomOf="@+id/calendar_name" />
 
     <TextView
-        android:id="@+id/profile_emailStr"
+        android:id="@+id/calendar_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="@string/profile_emailStr"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+        app:layout_constraintTop_toBottomOf="@+id/calendar_place" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

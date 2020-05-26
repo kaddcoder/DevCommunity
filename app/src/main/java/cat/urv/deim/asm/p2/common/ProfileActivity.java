@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import cat.urv.deim.asm.R;
+
 public class ProfileActivity extends AppCompatActivity {
 
     @Override
