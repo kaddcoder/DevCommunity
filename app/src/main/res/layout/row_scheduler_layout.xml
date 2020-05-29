@@ -17,7 +17,7 @@
         android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/title_scheduler"
+            android:id="@+id/title_faqs"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,7 +37,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
             android:textSize="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/title_scheduler"
+            app:layout_constraintTop_toBottomOf="@+id/title_faqs"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/media_image" />
 

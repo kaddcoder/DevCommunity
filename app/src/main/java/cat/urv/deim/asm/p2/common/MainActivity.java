@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import cat.urv.deim.asm.R;
+import cat.urv.deim.asm.p3.shared.FaqsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,6 +72,21 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        MenuItem faqs = navigationView.getMenu().findItem(R.id.nav_faqs);
+        faqs.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Class dest;
+
+                dest = FaqsActivity.class;
+
+                Intent intent = new Intent(MainActivity.this, dest);
+                startActivity(intent);
+                return false;
+            }
+        });
+
 
 
     }

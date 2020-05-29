@@ -79,7 +79,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         public CalendarHolder(View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.title_scheduler);
+            title = itemView.findViewById(R.id.title_faqs);
             subtitle = itemView.findViewById(R.id.subtitle_scheduler);
             date = itemView.findViewById(R.id.date);
             image = itemView.findViewById(R.id.media_image);

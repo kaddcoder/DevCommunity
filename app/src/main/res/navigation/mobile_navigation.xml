@@ -33,9 +33,7 @@
         android:id="@+id/nav_profile"
         android:name="cat.urv.deim.asm.p2.common.ProfileActivity" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_faqs"
-        android:name="cat.urv.deim.asm.p2.common.ui.faqs.FaqsFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_faqs" />
+        android:name="cat.urv.deim.asm.p3.shared.FaqsActivity" />
 </navigation>
